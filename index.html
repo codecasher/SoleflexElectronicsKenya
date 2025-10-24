@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soleflex Electronics Kenya | Find Trusted Electronic Shops for Laptops, TVs & Soundbars</title>
+  <meta name="description" content="Soleflex connects customers with reliable electronics shops across Kenya. Discover quality laptops, TVs, soundbars, and more from trusted stores near you." />
+  <meta name="keywords" content="Soleflex Kenya, electronics stores Kenya, buy laptops Kenya, soundbars Kenya, TVs Kenya, trusted electronics shops, affordable electronics Nairobi, online electronics shopping Kenya" />
+  <link rel="canonical" href="https://soleflex.co.ke/" />
+  <meta property="og:title" content="Soleflex Kenya | Trusted Electronics Shops" />
+  <meta property="og:description" content="Shop smart with Soleflex — your link to verified electronics stores selling laptops, TVs, and soundbars in Kenya." />
+  <meta property="og:image" content="https://soleflex.co.ke/images/store-logo.jpg" />
+  <meta property="og:url" content="https://soleflex.co.ke/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Soleflex" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://soleflex.co.ke/images/favicon.ico" type="image/x-icon" />
+
+  <!-- Schema Markup (JSON-LD for Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Soleflex",
+    "url": "https://yourdomain.com",
+    "logo": "https://yourdomain.com/images/store-logo.jpg",
+    "sameAs": [
+      "https://facebook.com/soleflexkenya",
+      "https://instagram.com/soleflex_kenya"
+    ],
+    "description": "Soleflex helps you find trusted shops across Kenya selling quality electronics like laptops, TVs, and soundbars.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+254700000000",
+      "contactType": "customer service",
+      "areaServed": "KE"
+    }
+  }
+  </script>
+
+  <!-- Fonts & Styles -->
+    <link rel="stylesheet" href="styles/style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=sans+serif+One&family=Life+Savers:wght@400;700;800&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="nav">
+  <div class="logo">
+    <h3>Soleflex</h3>
+  </div>
+
+  <div class="search-hamburger">
+    <div class="searchBar">
+      <input type="text" id="searchInput" placeholder="Search for products..." list="Listproducts">
+      <datalist id="Listproducts">
+      </datalist>
+      <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+
+    <script>
+  // Fetch the product list from JSON file
+  fetch("products.json")
+    .then(response => response.json())
+    .then(products => {
+      const datalist = document.getElementById("Listproducts");
+
+      // Populate datalist dynamically
+      products.forEach(product => {
+        const option = document.createElement("option");
+        option.value = product.name;
+        datalist.appendChild(option);
+      });
+
+      // Add search button click listener
+      document.getElementById("searchBtn").addEventListener("click", () => {
+        const inputValue = document.getElementById("searchInput").value.trim().toLowerCase();
+
+        // Find a matching product
+        const found = products.find(p => p.name.toLowerCase() === inputValue);
+
+        if (found) {
+          window.location.href = found.url;
+        } else {
+          alert("Sorry, product not found. Please try again.");
+        }
+      });
+
+      // Also redirect when pressing Enter
+      document.getElementById("searchInput").addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          document.getElementById("searchBtn").click();
+        }
+      });
+    })
+    .catch(error => {
+      console.error("Error loading product data:", error);
+    });
+</script>
+
+
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+    <div class="cart-icon">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span class="item-count"></span>
+    </div>
+    <div class="cart">
+      <h2 class="cart-title">Your cart</h2>
+      <div class="cart-content"></div>
+      <div class="total">
+        <div class="total-title">Total</div>
+        <div class="total-price">ksh 0</div>
+      </div>
+      <button class="btn-buy">Buy now</button>
+      <i class="fa-solid fa-xmark" id="cart-close"></i>
+    </div>
+  </ul>
+</div>
+</div>
+
+    <div class="page_one">
+        <div class="mygrid">
+             <div class="grid-item item-one">
+                 <div class="wrapper" id="slider-one">
+                    <img src="images/coverphotos/pexels-fauxels-3184460 (2).jpg" alt ="Slide 1" style="object-fit: cover;"/>
+                    <img src="images/coverphotos/pexels-fauxels-3184464 (2).jpg" alt="Slide 2" style="object-fit: cover;"/>
+                    <img src="images/coverphotos/pexels-jeshoots-218863 (1).jpg"  alt = "Slide 3" />
+                 </div>
+             </div>
+
+      <!-- Slideshow in item-two -->
+            <div class="grid-item item-two">
+                 <div class="wrapper" id="slider-two">
+                    <img src="images/coverphotos/pexels-jakubzerdzicki-26049969.jpg" alt="Slide 1" />
+                    <img src="images/coverphotos/pexels-mateusz-dach-99805-1294886.jpg" alt="Slide 2" />
+                    <img src="images/coverphotos/pexels-sound-on-3394656.jpg" alt="Slide 3" />
+                 </div>
+             </div>
+
+            <div class="grid-item item-three"><img src="images/coverphotos/pexels-knownasovan-62689.jpg" alt="" ></div>
+            <div class="grid-item item-four"><img src="images/coverphotos/pexels-flodahm-699459.jpg"  alt="" ></div>  
+        </div>
+    </div>
+
+   <script>
+  function startSlideshow(sliderId, totalSlides, intervalTime) {
+    const slider = document.getElementById(sliderId);
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % totalSlides;
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }, intervalTime);
+  }
+
+  // Start each slideshow with a different interval
+  startSlideshow("slider-one", 3, 8000); // 3 seconds
+  startSlideshow("slider-two", 3, 5000); // 5 seconds
+</script>
+         
+    <div class="top-picks">
+        <h2 style="padding-left: 40px; text-align: center; font-weight: bold; margin-bottom: 1em;">Top pick's for you!</h2>
+        <div class="toppicks-grid">
+            <div class="sale-item"><a href="items/laptops/lenovo-thinkpad-480s.html"><img src="images/laptops/lenovo-laptop-thinkpad-t480s-hero.webp" alt="lenovo-thinkpad-480s" style="object-fit: contain; height: 200px; width: 200px;">
+                <h4>Lenovo ThinkPad <br>480s</h4>
+                <p >Ksh 25,000/=</p>
+            </a>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>
+            </div>
+            <div class="sale-item"><a href="items/Tv's/tcl-v6c-50-inch.html"><img src="images/tvs/TCL V6c 50 inch.webp" alt=""  style="object-fit: contain;" >
+                <h4>TCL V6c 50 inch</h4>
+                <p>Ksh 40,000/=</p>
+            </a>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                
+              
+            </div>
+            <div class="sale-item"><a href="items/laptops/hp-elitebook-830g7.html"><img src="images/laptops/Hp Elitebook 845 G7.webp" alt=""  style="object-fit: contain;">
+                <h4>Hp Elitebook 845 G7</h4>
+                <p>Ksh 50,000/=</p>
+            </a>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>
+
+                
+            </div>
+            <div class="sale-item"><a href="items/Tv's/vitron-32-inch-smart-tv.html"><img src="images/tvs/Vitron-32-Inch-HD-Smart-Android-Frameless-Digital-LED-TV.webp" alt=""  height="250px" width="200">
+                <h4>Vitron 32 inch <br> smart tv</h4></a>
+                <p >ksh 13,000/=</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>  
+            </div>
+        </div>
+    </div>
+         <!-- First grid -->
+      <div class="shop-number" style=" text-align: left; margin-left: 2em;"><h3>Convenience Store</h3></div>
+  <div class="scroll-wrapper">
+    <button class="scroll-btn left"><i class="fa-solid fa-arrow-left"></i></button>
+    <div class="sale-grid">
+       <div class="sale-item" style="margin-left: 30px;">
+        <a href="items/laptops/lenovo-thinkpad-480s.html"><img src="images/laptops/lenovo-laptop-thinkpad-t480s-hero.webp" alt="lenovo-thinkpad-480s" style="object-fit: contain; height: 200px;">
+          <h4>Lenovo ThinkPad <br>480s</h4>
+        </a>
+        <p class="price">ksh 25,000/=</p>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+
+      <div class="sale-item">
+      <a href="items/laptops/lenovo-x1-yoga.html"><img src="images/laptops/Lenovo X1 Yoga.webp" alt="levovo-x1-yoga"
+        style="object-fit: contain; border-radius: 5%; height: 200px;">
+          <h4>Lenovo X1 Yoga</h4>
+        </a>
+        <p class="price">ksh 60,000/=</p>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+
+      <div class="sale-item">
+        <a href="items/laptops/hp-elitebook-850g5.html"><img src="images/laptops/Hp Elitebook 850 G5.webp" alt="hp-elitebook-850g5"style="object-fit:contain ; border-radius: 5%; height: 200px; overflow:hiddden;">
+          <h4>Hp Elitebook 850 G5</h4>
+        </a>
+        <p class="price">ksh 37,000/=</p>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+
+      <div class="sale-item">
+        <a href="items/laptops/dell-latitude-5300.html">
+          <img src="images/laptops/Dell Latitude 5300.webp" alt="dell-latitude-5300" style="object-fit: contain;" >
+          <h4>Dell Latitude 5300</h4>
+        </a>
+        <p class="price">ksh 29,000/=</p>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </div>
+
+      <div class="sale-item">
+        <a href="items/laptops/hp-elitebook-830g7.html">
+          <img src="../../images/laptops/Hp Elitebook 830g6.webp" alt="hp-elitebook-830g7" style="object-fit: cover;" >
+          <h4>Hp Elitebook 830 G7</h4>
+        </a>
+        <p class="price">ksh 50,000/=</p>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </div>
+
+      <div class="sale-item">
+        <a href="items/laptops/dell-latitude-7370.html">
+          <img src="images/laptops/Dell latitude 7370.webp" alt="dell-latitude-7370" style="object-fit: contain;" >
+          <h4>Dell Latitude 7370 </h4>
+        </a>
+        <p class="price">ksh 25,000/=</p>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+
+      <div class="sale-item">
+        <a href="items/laptops/dell-latitude-7390.html">
+          <img src="images/laptops/Dell Latitude 7390.webp" alt="dell-latitude-7390" >
+          <h4>Dell latitude 7390</h4>
+        </a>
+        <p class="price">ksh 62,000/=</p>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </div>
+
+      <div class="sale-item">
+        <a href="items/laptops/dell-latitude-7420.html">
+          <img src="images/laptops/Dell latitude 7420.webp" alt="dell-latitude-7420" style="object-fit: contain;">
+          <h4>Nike jordans black</h4>
+        </a>
+        <p class="price">ksh 5999/=</p>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+    </div>
+    <button class="scroll-btn right"><i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+
+  <!-- Second grid -->
+   <div class="shop-number"><h3 style = "text-align: left; margin-left: 2em;">Digital Electronics</h3></div>
+  <div class="scroll-wrapper">
+    <button class="scroll-btn left"><i class="fa-solid fa-arrow-left"></i></button>
+    <div class="sale-grid">
+       <div class="sale-item" style="margin-left: 30px;"><a href="items/Tv's/hisense-32-inch-vidda.html"><img src="images/tvs/Hisense 32 Hd Vidda smart tv.webp" alt="" height="250px" width="200">
+                <h4>Hisense 32 inch Vidda</h4>
+                <p >Ksh 20,000/=</p>
+            </a>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>
+            </div>
+            <div class="sale-item"><a href="items/Tv's/hisense-55-inch-smart-tv.html"><img src="images/tvs/Hisense 55 inch 4k mini led smart tv.webp" alt=""  height="250px" width="200">
+                <h4>Hisense 55 inch <br>smart tv</h4>
+                <p>Ksh 49,995/=</p>
+            </a>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                
+              
+            </div>
+            <div class="sale-item" style="margin-left: 10px;">
+              <a href="items/Tv's/vitron-50-inch-smart-tv.html">
+                <img src="images/tvs/vitron 50 inch smart.webp" alt="" >
+                <h4>Vitron 50 inch smart tv</h4>
+                <p class="price">ksh 29,000/=</p>
+              </a>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+             </div>
+            <div class="sale-item"><a href="items/Tv's/tcl-p7k-55-inch-smart-tv.html"><img src="images/tvs/Tcl P7K 55 inch QLed 4k HRD TV.webp" alt=""  height="250px" width="200" style="object-fit: contain;">
+                <h4>TCL p7k 55 inch</h4></a>
+                <p >ksh 42,500/=</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>  
+            </div>
+             <div class="sale-item">
+                <a href="items/Tv's/tcl-v6c-50-inch.html">
+                  <img src="images/tvs/TCL V6c 50 inch.webp" alt="" >
+                  <h4>TCL V6c 50 inch</h4>
+                </a>
+                <p class="price">ksh 40,000/=</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="sale-item">
+              <a href="items/Tv's/vitron-32-inch-smart-tv.html">
+                <img src="images/tvs/Vitron-32-Inch-HD-Smart-Android-Frameless-Digital-LED-TV.webp" alt="" >
+                <h4>Vitron 32 inch smart tv</h4>
+              </a>
+              <p class="price">ksh 5455/=</p>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <div class="sale-item">
+              <a href="items/Tv's/vitron-43-inch-smart-tv.html">
+                <img src="images/tvs/vitron 43 inch smart.webp" alt="" >
+                <h4>Vitron 43 inch smart tv</h4>
+              </a>
+              <p class="price"> ksh 23,000/=</p>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <div class="sale-item" style="margin-left: 10px;">
+              <a href="items/Tv's/tcl-p6k-55-inch.html">
+                <img src="images/tvs/TCL p6k HRD TV 55 75 55 inch TV.webp" alt="" >
+                <h4>TCL p6k 55 inch smart tv</h4>
+                <p class="price">ksh 41,500/=</p>
+              </a>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+             </div>
+        </div>
+        <button class="scroll-btn right"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+  <!-- third grid-->
+   <div class="shop-number"><h3 style = "text-align: left; margin-left: 2em;">Soundbar stores Kenya</h3></div>
+   <div class="scroll-wrapper">
+    <button class="scroll-btn left"><i class="fa-solid fa-arrow-left"></i></button>
+    <div class="sale-grid">
+      <div class="sale-item" style="margin-left: 30px;">
+        <a href="items/Soundbars/hisense-aud218-soundbar.html">
+          <img src="../../images/Soundbars/Hisense AUD218 2.1 Channel Bluetooth Soundbar.webp" alt="Hisense 218 bluetooth soundbar" >
+          <h4>Hisense AUD218 2.1 channel <br> Bluetooth Soundbar</h4>
+        </a>
+        <p class="price">ksh 8,000/=</p>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </div>
+      <div class="sale-item">
+        <a href="items/Soundbars/hisense-ax5125h.html">
+          <img src="../../images/Soundbars/Hisense AX5125H 5.1.2 ch soundbar.webp" alt="Hisense AX5125H" >
+          <h4>Hisense AX5125H</h4>
+        </a>
+        <p class="price">ksh 8,000/=</p>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+      <div class="sale-item"><a href="items/Soundbars/hisense-hs-1800.html">
+        <img src="../../images/Soundbars/Hisense Hs1800 soundbar.webp" alt="Hisense Hs1800" >
+                <h4>Hisense Hs1800 soundbar</h4>
+                <p >Ksh 9,000/=</p>
+            </a>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>
+            </div>
+      <div class="sale-item">
+        <a href="items/Soundbars/hisense-hs5100.html">
+          <img src="images/Soundbars/Hisense H5100 5.1 Ch soundbar.webp" alt="Hisense Hs5100" >
+          <h4>Hisense Hs5100 5.1 Channel <br> soundbar</h4>
+        </a>
+        <p class="price">ksh 29,995/=</p>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+       <div class="sale-item">
+        <a href="items/Soundbars/vitron-v51-sb.html">
+          <img src="../../images/Soundbars/Vitron-V51SB-2.1ch-Soundbar-1.webp" alt="Vitron v512sb">
+          <h4>Vitron V51 sb 2.1 soundbar</h4>
+        </a>
+        <p class="price">ksh 5,299/=</p>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </div>
+      <div class="sale-item">
+        <a href="items/Soundbars/vitron-v61-sb.html">
+          <img src="../../images/Soundbars/vitron v61 sb soundbar.webp" alt="vitron v61 sb soundbar" >
+          <h4>Vitron V61 SB soundbar</h4>
+        </a>
+        <p class="price"> ksh 8,000/=</p>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </div>
+       <div class="sale-item">
+        <a href="items/Soundbars/von-2.1ch-subwoofer.html">
+          <img src="../../images/Soundbars/Von 2.1ch wireless subwoofer VSB2002LFk.webp"  alt="Von 2.1ch wireless subwoofer">
+         <h4>Von 2.1 Channel subwoofer</h4>
+        </a>
+        <p class="price">ksh 21,995/=</p>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+      <div class="sale-item">
+        <a href="items/Soundbars/von-2.1ch-wired-subwoofer.html">
+           <img src="../../images/Soundbars/Von 2.1 VSB1202WFk Wired subwoofer.webp" alt="Von 2.1 ch soundbar"  >
+          <h4>Von 2.1 Channel wired subwoofer</h4>
+        </a>
+        <p class="price">ksh 17,995/=</p>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+    </div>
+    <button class="scroll-btn right"><i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+  <!--fourth grid-->
+  <div class="shop-number"><h3 style = "text-align: left; margin-left: 2em;">Electronic Appliances</h3></div>
+  <div class="scroll-wrapper">
+    <button class="scroll-btn left"><i class="fa-solid fa-arrow-left"></i></button>
+    <div class="sale-grid">
+      <div class="sale-item" style="margin-left: 30px;"><a href="items/otherElectronicAppliances/freepods-4anc-wireless-earbuds.html"><img src="images/OtherElectonicAppliances/Freepods 4 ANC True wireless Earbuds.webp" alt=""  height="250px" width="200">
+                <h4>Freepods 4 ANC True <br> wireless Earbuds</h4>
+                <p>Ksh 4,500/=</p>
+            </a>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i> 
+            </div>
+            <div class="sale-item"><a href="items/otherElectronicAppliances/oraimo-freepods-3c.html"><img src="images/OtherElectonicAppliances/Oraimo freepods 3c.webp" alt=""  height="250px" width="200" style="object-fit: contain;">
+                <h4>Oraimo Freepods 3c</h4></a>
+                <p >ksh 3,500/=</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>  
+            </div>
+            <div class="sale-item">
+        <a href="items/otherElectronicAppliances/oraimo-spacebuds-hybrid.html">
+          <img src="images/OtherElectonicAppliances/Oraimo spacebuds Hybrid.webp" alt="" >
+          <h4>Oraimo Spacebuds Hybrid</h4>
+        </a>
+        <p class="price">ksh 3,500/=</p>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </div>
+      <div class="sale-item">
+        <a href="items/otherElectronicAppliances/oraimo-wireless-neckless.html">
+          <img src="images/OtherElectonicAppliances/oraimo OEB-311 Neckless wireless Earbuds.webp" alt="" >
+          <h4>Oraimo Neckless wireless Earbuds</h4>
+        </a>
+        <p class="price">ksh 2,200/=</p>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </div>
+       <div class="sale-item" >
+        <a href="items/otherElectronicAppliances/oraimo-spacebuds-lite-oyw.html">
+          <img src="images/OtherElectonicAppliances/oraimo spacebuds lite OYW 324.webp" alt="" >
+          <h4>oraimo-spacebuds-lite-oyw</h4>
+          <p class="price">ksh 1,800/=</p>
+        </a>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </div>
+      <div class="sale-item"><a href="items/otherElectronicAppliances/ohp-317-grey-headphones.html"><img src="images/OtherElectonicAppliances/OHP-317-GREY.webp" alt="" height="250px" width="200">
+                <h4>oraimo BoomPop Lite ENC Over-Ear <br> Wireless Headphones</h4>
+                <p >Ksh 3,000/=</p>
+            </a>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>
+            </div>
+            <div class="sale-item"><a href="items/otherElectronicAppliances/oraimo-opensnap-airpods.html"><img src="images/OtherElectonicAppliances/oraimo-OpenSnap-N-OPN-372N-3.webp" alt=""  height="250px" width="200">
+                <h4>oraimo OpenSnap N Clip-On Open-Ear True Wireless Earbuds</h4></a>
+                <p >ksh 2000/=</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>  
+            </div>
+             <div class="sale-item">
+        <a href="items/otherElectronicAppliances/freepods-4anc-wireless-earbuds.html">
+          <img src="images/OtherElectonicAppliances/Freepods 4 ANC True wireless Earbuds.webp" alt="" >
+          <h4>Freepods 4 ANC True <br> wireless Earbuds</h4>
+        </a>
+        <p class="price">ksh 4,500/=</p>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+    </div>
+    <button class="scroll-btn right"><i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+    </div>
+    <div class="About-section">
+        <div class="About-img"><img src="images/coverphotos/pexels-harold-vasquez-853421-2653362 (1).jpg" alt="" ></div>
+        <div class="about-paragraph" style="margin-bottom: 5em;">
+            <h2 style="margin-bottom: 2px;">About Soleflex</h2>
+            <p>Power Your World — One Gadjet at a Time. <br>Welcome to Soleflex, your go-to hub for cutting-edge electronics — from sleek laptops and smart TVs to powerful soundbars <br> and must-have gadgets.At Soleflex, we believe tech isn’t just about performance — it’s about possibility. Whether you’re working, creating, or relaxing, we’ve got the devices that keep your world running smarter and smoother. <br>💻 Why Soleflex? Because innovation should look and feel this good. <br>🔌 Plug in. Power up. Live smart with Soleflex</p>
+        </div>
+    </div>
+    <div class="testimonials">
+        <div class="testimonial">
+            <h3>What our clients say about us</h3>
+        <div class="wrapper2">
+        <div>
+            <i class="fa-solid fa-quote-left"></i>
+            <p>" Best laptop deals around! Found a great HP laptop through Soleflex Electronics. The site made it easy to compare prices and specs from trusted shops. Super convenient and reliable platform!”</p>
+            <img src="images/coverphotos/man2.jpg" alt="man2"  height="50px" width="50px">
+            <p>— Brian K., Nairobi</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-quote-left"></i>
+            <p>“Awesome soundbar recommendation. I discovered my current soundbar thanks to Soleflex Electronics. They linked me to a legit store with the best deal and clear details. Great place to find quality electronics.” </p>
+            <img src="images/coverphotos/woman1.jpg" alt="man3" height="50px" width="50px">
+            <p> — Linda W., Kisumu</p>
+        </div>
+        <div>
+             <i class="fa-solid fa-quote-left"></i>
+             <p>“Trustworthy source for genuine gadgets. I bought my headphones and AirPods through a shop listed on Soleflex Electronics — both were authentic and exactly as described. Really love how the site connects you to verified sellers.”</p>
+             <img src="images/coverphotos/man3.jpg" alt="1woman" height="50px" width="50px">
+              <p> — Jay T., Mombasa</p>
+        </div>
+        </div>
+    </div>
+    </div>
+    <hr style="margin-top: 10em;">
+    <div class="footer">
+        <i class="fa-regular fa-copyright"></i>2025 Soleflex Stores. All Rights Reserved. Built by Derrick.G.Maina. <br>
+        TEL: 0798702143
+    </div>
+    <script src="script.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        loadCart();
+    });
+</script>
+     
+</body>
+</html>
