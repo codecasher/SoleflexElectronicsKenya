@@ -841,7 +841,7 @@ ul li {
     right: 0;         /* slide in fully visible */
   }
  .sale-grid .sale-item img {
-    height: 150px !important;
+    height: 120px !important;
     width: 120px;
     border-radius: 5%;
  }
@@ -849,7 +849,8 @@ ul li {
     height: 100%;
  }
  .sale-grid {
-    height: 248px;
+    height: 260px;
+   
  }
  .sale-item {
     height: 85%;
@@ -874,7 +875,8 @@ ul li {
   }
   .testimonials {
     margin-top: 0;
-    margin-bottom: 45em;
+    margin-bottom: 50em;
+    height: 100vh;
   }
  .testimonials h3 {
     margin-bottom: 2em;
@@ -883,17 +885,22 @@ ul li {
     flex-wrap: wrap;
     justify-content: center;
     margin-left: 25%;
+    height: 10%;
  }
   .testimonials .wrapper2 {
     display: flex;
     flex-direction: column;
+    margin-bottom: 2em;
+    height: 90%;
   }
   .wrapper2 div {
     max-width: 90%;
     justify-content: center;
     align-content: center;
     padding-bottom: 20px;
+    height: 90%;
   }
+
 
 }
 
