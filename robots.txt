@@ -1,0 +1,13 @@
+# robots.txt for https://soleflex.co.ke
+# This file allows all search engines to crawl and index your entire website
+
+User-agent: *
+Allow: /
+
+# Sitemap location (helps search engines find all your pages)
+Sitemap: https://soleflex.co.ke/sitemap.xml
+
+# Preferred domain
+Host: https://soleflex.co.ke
+
+# End of file
